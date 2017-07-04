@@ -1,15 +1,10 @@
 package com.mkyong.stock.bo;
 
+import com.mkyong.dao.GenericDAO;
 import com.mkyong.stock.model.Stock;
 
-public interface StockBo {
-	
-	void save(Stock stock);
-	
-	void update(Stock stock);
-	
-	void delete(Stock stock);
-	
+public interface StockBo extends GenericDAO<Stock, Long>{
+		
 	Stock findByStockCode(String stockCode);
 
 }

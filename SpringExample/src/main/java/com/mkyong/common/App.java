@@ -14,12 +14,13 @@ public class App
     		new ClassPathXmlApplicationContext("spring/config/BeanLocations.xml");
 	
     	StockBo stockBo = (StockBo)appContext.getBean("stockBo");
-    	
+    	System.out.println(stockBo);
     	/** insert **/
     	Stock stock = new Stock();
-    	stock.setStockCode("7668");
+    	stock.setStockCode("76268");
     	stock.setStockName("HAIO");
-    	stockBo.save(stock);
+    	stockBo.saveOrUpdate(stock);
+    	System.out.println(stock);
     	
     	/** select **/
     	Stock stock2 = stockBo.findByStockCode("7668");
@@ -30,7 +31,7 @@ public class App
     	stockBo.update(stock2);
     	
     	/** delete **/
-    	stockBo.delete(stock2);
+    	stockBo.remove(stock2);
     	
     	System.out.println("Done");
     }

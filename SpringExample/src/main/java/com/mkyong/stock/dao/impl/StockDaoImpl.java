@@ -1,30 +1,20 @@
 package com.mkyong.stock.dao.impl;
 
-import java.util.List;
+import org.hibernate.Query;
 
-import org.springframework.orm.hibernate3.support.HibernateDaoSupport;
-
+import com.mkyong.dao.impl.GenericDAOImpl;
 import com.mkyong.stock.dao.StockDao;
 import com.mkyong.stock.model.Stock;
 
-public class StockDaoImpl extends HibernateDaoSupport implements StockDao{
+public class StockDaoImpl extends GenericDAOImpl<Stock, Long> implements StockDao{
 	
-	public void save(Stock stock){
-		//getHibernateTemplate().save(stock);
-	}
-	
-	public void update(Stock stock){
-		//getHibernateTemplate().update(stock);
-	}
-	
-	public void delete(Stock stock){
-		//getHibernateTemplate().delete(stock);
-	}
 	
 	public Stock findByStockCode(String stockCode){
-		return null;
-		//List list = getHibernateTemplate().find("from Stock where stockCode=?",stockCode);
-		//return (Stock)list.get(0);
+		String sql = "from Stock where stockCode=?";
+		Query query = currentSession().createQuery(sql);
+		query.setString(0, stockCode);
+		Stock stock = (Stock) query.uniqueResult();
+		return stock;
 	}
 
 }
