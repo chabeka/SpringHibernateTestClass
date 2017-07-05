@@ -1,0 +1,8 @@
+/Users/aliou/git/SpringHibernateTestClass/SpringExample/src/main/java/com/mkyong/common/App.java
+/Users/aliou/git/SpringHibernateTestClass/SpringExample/src/main/java/com/mkyong/stock/dao/StockDao.java
+/Users/aliou/git/SpringHibernateTestClass/SpringExample/src/main/java/com/mkyong/dao/GenericDAO.java
+/Users/aliou/git/SpringHibernateTestClass/SpringExample/src/main/java/com/mkyong/dao/impl/GenericDAOImpl.java
+/Users/aliou/git/SpringHibernateTestClass/SpringExample/src/main/java/com/mkyong/stock/model/Stock.java
+/Users/aliou/git/SpringHibernateTestClass/SpringExample/src/main/java/com/mkyong/stock/dao/impl/StockDaoImpl.java
+/Users/aliou/git/SpringHibernateTestClass/SpringExample/src/main/java/com/mkyong/stock/bo/impl/StockBoImpl.java
+/Users/aliou/git/SpringHibernateTestClass/SpringExample/src/main/java/com/mkyong/stock/bo/StockBo.java
